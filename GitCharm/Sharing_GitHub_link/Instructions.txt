@@ -1,0 +1,89 @@
+Prerequisites:
+  Pycharm Installed
+  Git Installed
+  Internet Access
+  Decent Browser
+  
+Overview:
+One person creates project, pushes it to GitHub repo, and provides access to rest of group.
+The rest of group pulls project from GitHub, configures virtual environment.
+Collaboration begins.
+
+Prerequisites:
+  Pycharm Installed
+  Git Installed
+  Internet Access
+  Decent Browser
+
+Overview:
+One person creates project, pushes it to GitHub repo, and provides write access to rest of group.
+The rest of group pulls project from GitHub, configures virtual environment.
+Collaboration begins.
+
+
+Phase 1) Pycharm isn't going to re-implement Git, that would be silly.  If you don't already have Git now is the time to add it.
+
+INSTALL GIT:
+-----------
+1) Go to Git Download page:
+    https://git-scm.com/downloads
+ This example uses Windows, so Click "Windows (if you use Linux you are awesome and I assume you don't need this guide to install Git)
+2) Site should auto launch download of proper Setup file.
+ Otherwise click to Manually Download
+ Open install file and grant permission to install
+3) Installer will launch:  [This is just a lot of clicking Next, feel free to not bother reading this, the defaults will work with Pycharm]
+	a)click next
+	b)optionally set installation directory, click next
+	c)optionally add icons if you wish, click next
+	d)optionally change start menu folder, click next
+	e)optionally select default text editor (unless you plan to use Git outside of PyCharm this setting will not matter), click next
+	f)let Git decide, click Next
+	g)Git from command line, click Next
+	h)Use OpenSSL library, click Next
+	i)Check out Windows-style (Jayson would be happy to explain why this matters), click Next
+	j)Who even uses terminal emulators in Windows? Click Next
+	k)"The two greatest words in the English Language, De Fault!"  Homer J. Simpson, click Next
+	l)Does this even matter?  It might, lets not take the chance and get the shiney NEW! credential manager, click Next
+	m)Is anyone still bothering to read this?  I hope not, click Next
+	n)"Experimental?", "Known Bugs?", for the love of all that is lovable, don't check that box!  Click Install.
+	o)optionally uncheck "View Release Notes," click Finish
+
+Phase 2) Player One will create a project and push it up to GitHub
+Phase 3) Player One will share the project with rest of team
+Phase 4) The other players will pull project from GitHub
+
+ATTACH PYCHARM TO YOUR GITHUB ACCOUNT:
+-------------------------------------
+1)From PyCharm splash screen select "Get From Version Control"
+2)If you have not configured a GitHub account in Pycharm, now's the time
+	a)Click GitHub in the left menu
+	b)Choose "Log In Via GitHub
+	c)Pycharm will launch your default browser, click Authorize in GitHub
+	d)Click Authorize JetBrains
+	e)If you're not already in "sudo" mode you will have  to confirm your password
+3)Now this is pretty cool, Pycharm automatically checks GitHub for your projects!  Since you already accepted the invitation to collaborate from Player One it shows up in your list!
+	a)Choose your directory and Clone the repo.
+	b)Things look boring, and your run environment isn't set up yet.  click 1:Project and Terminal, maybe expand some folders.
+	c)Click "Add Configuration..."
+	d)Expand "Templates" in left menu
+	e)Select "Django Server" template
+	f)And this is where I realize I don't have Python 3.8 in my Windows version of PyCharm... and this project was created with 3.8
+		If you run into this problem:
+		1 You need to have Python3.8 (or whichever version you need) installed already, then go to File->Settings (Ctrl+Alt+S)
+		2 Expand the project
+		3 Choose Python Interpreter
+		4 Open Drop down and select "Show All"
+		5 It's not there yet, choose the '+' sign to add
+		6 Make sure you are in Virtualenv Environment, select appropriate interpreter version (In my case it is python.exe in the WindowsApps folder)
+	g)This will take a minute as PyCharm builds your virual evironment, you will see the venv folder has been created
+	h)But I still can't run quite yet, some packages are missing
+	i)Go back into the Python Interpreter (see 3f 1-3)
+	j)Click the "+" sign to add packages
+	k)Search for the packages you need and install them one by one [ Django, asgiref, pip, pytz, setuptools, sqlparse ]
+	l)run your first migration in the Terminal Windows
+	m)If it doesn't work Jayson is to blame
+
+Phase 5) Profit!
+
+
+
